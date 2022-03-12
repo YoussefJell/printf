@@ -2,7 +2,6 @@
 /**
  * write_char - writes the character c to stdout
  * @c: The character to print
- *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -14,7 +13,6 @@ int write_char(const char c)
 /**
  * write_string - writes the string to stdout
  * @string: The string to print
- *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -26,9 +24,7 @@ int write_string(const char *string)
 /**
  * write_number- writes the number to stdout
  * @number: The string to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: number of digits
  */
 int write_number(int number)
 {
@@ -44,7 +40,7 @@ int write_number(int number)
 		count++;
 		write(1, &sign, 1);
 	}
-	else 
+	else
 		unsigned_number = (unsigned int)number;
 
 	while (unsigned_number / i > 9)
