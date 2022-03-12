@@ -1,5 +1,11 @@
 #include "main.h"
-
+/**
+ *  _printf - prints a string to standard output
+ * @format: The string to print
+ * @...: The alipsis
+ * Return: 1ength of characters printed
+ * On error, -1 is returned
+ */
 int _printf(const char *format, ...)
 {
 	int i, counter;
@@ -7,11 +13,9 @@ int _printf(const char *format, ...)
 	va_list pa1;
 
 	if (format == NULL)
-		return (0);
-
+		return (-1);
 	counter = 0;
 	va_start(pa1, format);
-
 	for(i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
@@ -21,6 +25,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (format[i + 1] == ' ')
+				i = space(format, i + 1);
 			switch(format[i + 1])
 			{
 				case 'c':
@@ -42,20 +48,14 @@ int _printf(const char *format, ...)
 					write_char('%');
 					counter++;
 					break;
+				default:
+					write_char('%');
+					i--;
+					break;
 			}
 			i++;
 		}
 	}
 	va_end(pa1);
-
 	return (counter);
-}
-
-
-int main()
-{
-	int a;
-	a =_printf("123456789 %% %i %c %d %s world\n", -4, 'c',-23, "s");
-	printf("%d",a);
-	return (0);
 }

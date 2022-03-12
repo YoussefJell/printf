@@ -7,6 +7,7 @@
 #include <unistd.h>
 
 int _strlen(const char *string);
+int space(const char *format, int index);
 int write_char(const char c);
 int write_string(const char *string);
 int write_number(int number);
