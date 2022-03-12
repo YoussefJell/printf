@@ -9,5 +9,7 @@
 int _strlen(const char *string);
 int write_char(const char c);
 int write_string(const char *string);
+int write_number(int number);
 int _printf(const char *format, ...);
+
 #endif

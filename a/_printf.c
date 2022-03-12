@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (0);
+
 	counter = 0;
 	va_start(pa1, format);
 
@@ -31,10 +32,16 @@ int _printf(const char *format, ...)
 					write_string(string);
 					counter += _strlen(string);
 					break;
+				case 'i':
+					counter += write_number(va_arg(pa1, int));
+					break;
+				case 'd':
+					counter += write_number(va_arg(pa1, int));
+					break;
 				case '%':
 					write_char('%');
+					counter++;
 					break;
-
 			}
 			i++;
 		}
@@ -48,7 +55,7 @@ int _printf(const char *format, ...)
 int main()
 {
 	int a;
-	a =_printf("123456789 %% %c %s world\n", 'c', 'h');
+	a =_printf("123456789 %% %i %c %d %s world\n", -4, 'c',-23, "s");
 	printf("%d",a);
 	return (0);
 }
