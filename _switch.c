@@ -44,6 +44,7 @@ int _switch(const char *format, va_list pa1, int index, int *counter)
 		break;
 	default:
 		write_char('%');
+		(*counter)++;
 		index--;
 		break;
 	}
