@@ -12,7 +12,7 @@ It is a variadic function, that takes one fixed parameter which is a "const char
 *Conversion specifiers*
 
 * %c: Specifies a single-byte character.
-* %s: Specifies a single-byte or multi-byte character string.					
+* %s: Specifies a single-byte or multi-byte character string.
 * %i, %d: Signed decimal integer.
 
 
@@ -36,7 +36,7 @@ int main(void)
 
 	number1 = _printf("%s %i %d\n", "test", 0, 1); /*expected:test 0 1*/
 
-	_printf("Number of characters: %d\n", number1); /* xpected:9*/
+	_printf("Number of characters: %d\n", number1); /* Expected:9*/
 
 	number2 = _printf("%% %c\n", 'A'); /*expected:% A*/
 
