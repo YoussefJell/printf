@@ -18,8 +18,8 @@ It is a variadic function, that takes one fixed parameter which is a "const char
 
 ## Usage
 
-- All the files (*.c and main.h) have to be compiled on Ubuntu 14.04 LTS.
-- Compile your code with gcc -Wall -Werror -Wextra -pedantic *.c main.h.
+- All the files (*.c and main.h) have to be compiled on Ubuntu 20.04 LTS.
+- Compile your code with gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c main.h
 
 ## Example
 ```c
