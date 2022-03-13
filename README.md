@@ -11,9 +11,9 @@ It is a variadic function, that takes one fixed parameter which is a "const char
 
 *Conversion specifiers*
 
-%c: Specifies a single-byte character.
-%s: Specifies a single-byte or multi-byte character string.					
-%i, %d: Signed decimal integer.
+* %c: Specifies a single-byte character.
+* %s: Specifies a single-byte or multi-byte character string.					
+* %i, %d: Signed decimal integer.
 
 
 ## Usage
@@ -22,8 +22,8 @@ It is a variadic function, that takes one fixed parameter which is a "const char
 - Compile your code with gcc -Wall -Werror -Wextra -pedantic *.c main.h.
 
 ## Example
-
-```#include "main.h"
+```c
+#include "main.h"
 /**
  * main - Entry point
  *
@@ -44,4 +44,5 @@ int main(void)
 	printf("Number of characters: %d\n", number1); /*expected:4*/
 
 	return (0);
-}```
+}
+```
