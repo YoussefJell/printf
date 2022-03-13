@@ -9,13 +9,12 @@ This project represents a basic implementation of the printf().
 _printf() is a function that do formatted printing to the standard output stream and returns the number of displayed characters.
 It is a variadic function, that takes one fixed parameter which is a "const char * format", and multiple other variable parameters.
 
-*Conversion specifiers*		*Argument/Parameter*		*Output format*
----------------------------------------------------------------------------------------------------------------
-%c							Character.					Specifies a single-byte character.
-%s 							Array of characters that	Specifies a single-byte or multi-byte character string.
-							end with '\0'.
-%i, %d  					Decimal integer.			Signed decimal integer.
----------------------------------------------------------------------------------------------------------------
+*Conversion specifiers*
+
+%c: Specifies a single-byte character.
+%s: Specifies a single-byte or multi-byte character string.					
+%i, %d: Signed decimal integer.
+
 
 ## Usage
 
@@ -23,7 +22,7 @@ It is a variadic function, that takes one fixed parameter which is a "const char
 - Compile your code with gcc -Wall -Werror -Wextra -pedantic *.c main.h.
 
 ## Example
-
+`
 #include "main.h"
 /**
  * main - Entry point
@@ -45,4 +44,4 @@ int main(void)
 	printf("Number of characters: %d\n", number1); /*expected:4*/
 
 	return (0);
-}
+}`
