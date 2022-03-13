@@ -33,15 +33,14 @@ It is a variadic function, that takes one fixed parameter which is a "const char
 int main(void)
 {
 	int number1, number2;
-	char *str;
 
 	number1 = _printf("%s %i %d\n", "test", 0, 1); /*expected:test 0 1*/
 
-	printf("Number of characters: %d\n", number1); /* xpected:9*/
+	_printf("Number of characters: %d\n", number1); /* xpected:9*/
 
 	number2 = _printf("%% %c\n", 'A'); /*expected:% A*/
 
-	printf("Number of characters: %d\n", number1); /*expected:4*/
+	_printf("Number of characters: %d\n", number1); /*expected:4*/
 
 	return (0);
 }
