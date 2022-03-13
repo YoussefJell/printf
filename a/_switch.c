@@ -21,8 +21,16 @@ int _switch(const char *format, va_list pa1, int index, int *counter)
 		break;
 	case 's':
 		string = va_arg(pa1, char *);
-		write_string(string);
-		(*counter) += _strlen(string);
+		if (string != NULL)
+		{
+			write_string(string);
+			(*counter) += _strlen(string);
+		}
+		else
+		{
+			write_string("(null)");
+			(*counter) += 6;
+		}
 		break;
 	case 'i':
 		(*counter) += write_number(va_arg(pa1, int));

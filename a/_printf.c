@@ -11,8 +11,6 @@ int _printf(const char *format, ...)
 	int i, counter;
 	va_list pa1;
 
-	if (format == NULL)
-		return (-1);
 	counter = 0;
 	va_start(pa1, format);
 	for (i = 0; format[i] != '\0'; i++)
@@ -24,6 +22,9 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
+
 			i = _switch(format, pa1, i, &counter);
 			i++;
 		}
