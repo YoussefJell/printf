@@ -22,8 +22,8 @@ It is a variadic function, that takes one fixed parameter which is a "const char
 - Compile your code with gcc -Wall -Werror -Wextra -pedantic *.c main.h.
 
 ## Example
-`
-#include "main.h"
+
+```#include "main.h"
 /**
  * main - Entry point
  *
@@ -44,4 +44,4 @@ int main(void)
 	printf("Number of characters: %d\n", number1); /*expected:4*/
 
 	return (0);
-}`
+}```
