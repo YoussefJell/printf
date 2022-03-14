@@ -12,6 +12,10 @@ int _printf(const char *format, ...)
 	va_list pa1;
 
 	counter = 0;
+
+	if (format == NULL)
+		return (0);
+
 	va_start(pa1, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
